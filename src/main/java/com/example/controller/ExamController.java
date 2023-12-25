@@ -1,6 +1,6 @@
-package com.example.dim.controller;
+package com.example.controller;
 
-import com.example.dim.service.ExamService;
+import com.example.service.ExamService;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

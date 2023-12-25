@@ -1,6 +1,6 @@
-package com.example.dim.repo;
+package com.example.repo;
 
-import com.example.dim.entity.Student;
+import com.example.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository

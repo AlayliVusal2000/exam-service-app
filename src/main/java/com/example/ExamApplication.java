@@ -1,13 +1,13 @@
-package com.example.dim;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DimExamApplication {
+public class ExamApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DimExamApplication.class, args);
+        SpringApplication.run(ExamApplication.class, args);
     }
 
 }

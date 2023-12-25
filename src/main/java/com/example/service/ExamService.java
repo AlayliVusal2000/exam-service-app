@@ -1,7 +1,7 @@
-package com.example.dim.service;
+package com.example.service;
 
-import com.example.dim.repo.StudentAnswerRepository;
-import com.example.dim.repo.StudentRepository;
+import com.example.repo.StudentAnswerRepository;
+import com.example.repo.StudentRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
