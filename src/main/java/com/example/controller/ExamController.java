@@ -1,7 +1,6 @@
 package com.example.controller;
 
 import com.example.service.ExamService;
-import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +16,6 @@ import java.util.Map;
 @RequestMapping("/exam")
 public class ExamController {
     private final ExamService examService;
-    private final EntityManager entityManager;
 
     @GetMapping("/questionPercentage/{questionNumber}")
     public ResponseEntity<Map<String, String>> getQuestionStatistics(@PathVariable Integer questionNumber) {
@@ -25,11 +23,11 @@ public class ExamController {
     }
 
     @GetMapping("/result/{studentName}")
-    public String result(@PathVariable String studentName) {
+    public String studentResult(@PathVariable String studentName) {
         return examService.result(studentName);
     }
 
-    @GetMapping("/student/{studentName}")
+    @GetMapping("/examResult/{studentName}")
     public ResponseEntity<List<Map<String, String>>> getExamResults(@PathVariable String studentName) {
         return examService.getExamResults(studentName);
     }

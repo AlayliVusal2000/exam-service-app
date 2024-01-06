@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @NamedQuery(name = "StudentAnswer.getQuestionStatistics",
-
         query = "SELECT CONCAT( CONCAT(ROUND(SUM(CASE WHEN sa.answerByStudent = 'A' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2), '%'),(case when ex.correctAnswer='A'then' ✅'else ''end ))AS A," +
                 "       CONCAT( CONCAT(ROUND(SUM(CASE WHEN sa.answerByStudent = 'B' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2), '%'),(case when ex.correctAnswer='B'then' ✅'else ''end ))AS B," +
                 "       CONCAT( CONCAT(ROUND(SUM(CASE WHEN sa.answerByStudent = 'C' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2), '%'),(case when ex.correctAnswer='C'then' ✅'else ''end ))AS C," +
